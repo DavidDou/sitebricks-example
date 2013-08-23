@@ -1,0 +1,20 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'jetty'
+
+jettyRun.contextPath = '/'
+jettyRun.httpPort = 8081
+
+ideaProject {
+//    javaVersion = '1.6'
+}
+
+repositories {
+    mavenRepo name: 'my repo', urls: ["file://${System.properties['user.home']}/.m2/repository/"]
+    mavenCentral()
+//    mavenRepo name: 'google snapshot', urls: ['http://oss.sonatype.org/content/repositories/google-snapshots']
+}
+
+dependencies {
+    compile 'com.google.sitebricks:sitebricks:0.8.8', 'javax.servlet:javax.servlet-api:3.0.1'
+}

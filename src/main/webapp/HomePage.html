@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sitebricks :: Servlet/Jetty Archetype</title>
+</head>
+<body>
+
+  <!-- the ShowIf annotation selectively hides or shows the tag it annotates -->
+  @ShowIf(shouldShow)
+  <div>Message from the app: <b>${message}</b></div>
+
+  @TestWidget
+  <ul/>
+
+  <!-- Inline expressions work in comments too: ${message} -->
+</body>
+</html>
